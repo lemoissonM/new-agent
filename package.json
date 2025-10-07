@@ -1,0 +1,38 @@
+{
+  "name": "lesson-generator",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "tsx watch src/server/index.ts",
+    "client": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "db:migrate": "tsx src/server/db/migrate.ts"
+  },
+  "dependencies": {
+    "@openai/chatkit": "^0.1.0",
+    "openai": "^4.20.1",
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "pgvector": "^0.1.8",
+    "zod": "^3.22.4",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.5",
+    "@types/pg": "^8.10.9",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/cors": "^2.8.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8"
+  }
+}
